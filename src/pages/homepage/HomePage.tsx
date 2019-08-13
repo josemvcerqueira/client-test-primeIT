@@ -16,7 +16,7 @@ interface Props extends RouteComponentProps {
 
 const HomePage: FC<Props> = ({ collection, history }) => {
     useEffect(() => {}, [collection]);
-    console.log(history);
+
     const handleClick = (id: string): void => history.push(`/${id}`);
 
     return (

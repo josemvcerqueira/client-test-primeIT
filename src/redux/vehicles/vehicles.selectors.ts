@@ -27,12 +27,3 @@ export const selectIsVehiclesFetching = createSelector<
     [selectVehiclesState],
     (previews: ReducerState): boolean => previews.isFetching,
 );
-
-export const selectIsVehiclesLoaded = createSelector<
-    State,
-    ReducerState,
-    boolean
->(
-    [selectVehiclesState],
-    (previews: ReducerState): boolean => !!previews.vehicles,
-);

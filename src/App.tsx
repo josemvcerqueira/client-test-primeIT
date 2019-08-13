@@ -4,7 +4,7 @@ import { Route, Switch } from 'react-router-dom';
 import { connect, Connect } from 'react-redux';
 
 import HomePageContainer from './pages/homepage/HomePage.container';
-import VehiclePage from './pages/vehiclepage/VehiclePage';
+import CarPage from './pages/carpage/CarPage';
 import { fetchVehiclesStart } from './redux/vehicles/vehicles.actions';
 
 interface Props {
@@ -20,7 +20,7 @@ const App: React.FC<Props> = ({ fetchInitialData }) => {
         <div>
             <Switch>
                 <Route exact path="/" component={HomePageContainer} />
-                <Route path="/:vehicleId" component={VehiclePage} />
+                <Route path="/:vehicleId" component={CarPage} />
             </Switch>
         </div>
     );
